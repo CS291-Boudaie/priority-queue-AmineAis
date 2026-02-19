@@ -73,7 +73,9 @@ class MinHeap:
             parent= (idx-1)//2
             if self.data[idx][0]< self.data[parent][0]:
                 self.data[idx], self.data[parent]= self.data[parent], self.data[idx]
-                idx=parent 
+                idx=parent
+            else:
+                break
 
     def _bubble_down(self, idx):
         size= len(self.data)

@@ -50,7 +50,7 @@ class MinHeap:
         return len(self.data) == 0
 
     def peek(self):
-        if is_empty():
+        if self.is_empty():
             return None
         return self.data[0]
 
@@ -74,13 +74,13 @@ class MinHeap:
             if self.data[idx][0]< self.data[parent][0]:
                 self.data[idx], self.data[parent]= self.data[parent], self.data[idx]
                 idx=parent 
-                
+
     def _bubble_down(self, idx):
         size= len(self.data)
 
         while True:
-            left child = 2*i + 1
-            right child = 2*i + 2
+            left child = 2*idx+ 1
+            right child = 2*idx + 2
             small_value= idx
             if left child< size and self.data[left child][0]<self.data[small_value][0]:
                 small_value= left child 

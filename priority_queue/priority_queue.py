@@ -88,6 +88,8 @@ class MinHeap:
                 small_value= left child 
             if right child< size and self.data[right child][0]<self.data[small_value][0]:
                 small_value= right child
+            if smallest == idx:
+                break
             self.data[idx], self.data[small_value]= self.data[small_value], self.data[idx]
             idx= small_value
         
